@@ -10,34 +10,43 @@ import Foundation
 import XCTest
 
 public extension Equatable {
-    public func assert(_ otherValue : Self , message : String = "")  {
-        XCTAssertEqual(self, otherValue, message)
+    public func assert(_ otherValue : Self , message : String = "",
+                       file: StaticString = #file, line: UInt = #line)  {
+        XCTAssertEqual(self, otherValue, message, file: file, line: line)
     }
 }
 
 public extension Optional {
-    public func assertNil(message : String = ""){
-        XCTAssertNil(self,message)
+    public func assertNil(message : String = "",
+                          file: StaticString = #file,
+                          line: UInt = #line){
+        XCTAssertNil(self,message, file: file, line: line)
     }
-    public func assertNotNil(message : String = ""){
-        XCTAssertNotNil(self, message)
+    public func assertNotNil(message : String = "",
+                             file: StaticString = #file,
+                             line: UInt = #line){
+        XCTAssertNotNil(self, message, file: file, line: line)
     }
     
-    public func assertNotNilAnd(message : String = "", otherAction : (Wrapped)->Void) {
+    public func assertNotNilAnd(message : String = "",
+                                file: StaticString = #file,
+                                line: UInt = #line,
+                                otherAction : (Wrapped)->Void) {
         guard let safe = self else{
-            XCTAssertNotNil(self)
+            XCTAssertNotNil(self, file: file, line: line)
             return
         }
         otherAction(safe)
     }
     
-   
+    
 }
 
 public extension Optional where Wrapped : Equatable {
-    public func assertNotNilEquals(_ value : Wrapped , message : String = "") {
+    public func assertNotNilEquals(_ value : Wrapped , message : String = "",
+                                   file: StaticString = #file, line: UInt = #line) {
         guard let safe = self else{
-            XCTAssertNotNil(self)
+            XCTAssertNotNil(self, file: file, line: line)
             return
         }
         XCTAssertEqual(safe, value,message)
