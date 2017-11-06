@@ -10,45 +10,52 @@ import Foundation
 import XCTest
 
 public extension Equatable {
-    public func assert(_ otherValue : Self , message : String = "",
-                       file: StaticString = #file, line: UInt = #line)  {
+    public func assert(_ otherValue: Self, message: String = "",
+                       file: StaticString = #file, line: UInt = #line) {
         XCTAssertEqual(self, otherValue, message, file: file, line: line)
     }
 }
 
 public extension Optional {
-    public func assertNil(message : String = "",
+    public func assertNil(message: String = "",
                           file: StaticString = #file,
-                          line: UInt = #line){
-        XCTAssertNil(self,message, file: file, line: line)
+                          line: UInt = #line) {
+        XCTAssertNil(self, message, file: file, line: line)
     }
-    public func assertNotNil(message : String = "",
+
+    public func assertNotNil(message: String = "",
                              file: StaticString = #file,
-                             line: UInt = #line){
+                             line: UInt = #line) {
         XCTAssertNotNil(self, message, file: file, line: line)
     }
-    
-    public func assertNotNilAnd(message : String = "",
+
+    public func assertNotNilAnd(message: String = "",
                                 file: StaticString = #file,
                                 line: UInt = #line,
-                                otherAction : (Wrapped)->Void) {
-        guard let safe = self else{
+                                otherAction: (Wrapped) -> Void) {
+        guard let safe = self else {
             XCTAssertNotNil(self, file: file, line: line)
             return
         }
         otherAction(safe)
     }
-    
-    
+
+
 }
 
-public extension Optional where Wrapped : Equatable {
-    public func assertNotNilEquals(_ value : Wrapped , message : String = "",
+public extension Optional where Wrapped: Equatable {
+    public func assertNotNilEquals(_ value: Wrapped, message: String = "",
                                    file: StaticString = #file, line: UInt = #line) {
-        guard let safe = self else{
+        guard let safe = self else {
             XCTAssertNotNil(self, file: file, line: line)
             return
         }
-        XCTAssertEqual(safe, value,message)
+        XCTAssertEqual(safe, value, message)
+    }
+}
+
+public extension XCTestCase {
+    func failTests(_ message: String, file: StaticString = #file, line: UInt = #line) {
+        XCTFail(message, file: file, line: line)
     }
 }
