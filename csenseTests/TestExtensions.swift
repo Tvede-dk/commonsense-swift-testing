@@ -14,6 +14,11 @@ public extension Equatable {
                        file: StaticString = #file, line: UInt = #line) {
         XCTAssertEqual(self, otherValue, message, file: file, line: line)
     }
+
+    public func assert(_ otherValue: Self?, message: String = "",
+                       file: StaticString = #file, line: UInt = #line) {
+        XCTAssertEqual(self, otherValue, message, file: file, line: line)
+    }
 }
 
 public extension Optional {
@@ -40,7 +45,6 @@ public extension Optional {
         otherAction(safe)
     }
 
-
 }
 
 public extension Optional where Wrapped: Equatable {
@@ -51,6 +55,11 @@ public extension Optional where Wrapped: Equatable {
             return
         }
         XCTAssertEqual(safe, value, message)
+    }
+
+    public func assert(_ otherValue: Wrapped?, message: String = "",
+                       file: StaticString = #file, line: UInt = #line) {
+        XCTAssertEqual(self, otherValue, message, file: file, line: line)
     }
 }
 
