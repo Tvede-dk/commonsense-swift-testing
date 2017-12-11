@@ -11,6 +11,7 @@
 		A704F4101FAC4C1300833615 /* csenseTests.h in Headers */ = {isa = PBXBuildFile; fileRef = A704F4021FAC4C1300833615 /* csenseTests.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A7D3CD831FACA37B00A8633F /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D3CD821FACA37B00A8633F /* TestExtensions.swift */; };
 		A7D3CD861FACA40A00A8633F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D3CD851FACA3D800A8633F /* XCTest.framework */; };
+		BC236415BC58E9AEE6336434 /* CollectionsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23653C04375CC93CE436B3 /* CollectionsExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +31,7 @@
 		A704F4081FAC4C1300833615 /* csenseTestsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = csenseTestsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D3CD821FACA37B00A8633F /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		A7D3CD851FACA3D800A8633F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BC23653C04375CC93CE436B3 /* CollectionsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionsExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				A704F4021FAC4C1300833615 /* csenseTests.h */,
 				A704F4031FAC4C1300833615 /* Info.plist */,
 				A7D3CD821FACA37B00A8633F /* TestExtensions.swift */,
+				BC236F03F1E5FCE07A104B74 /* extensions */,
 			);
 			path = csenseTests;
 			sourceTree = "<group>";
@@ -86,6 +89,14 @@
 				A7D3CD851FACA3D800A8633F /* XCTest.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC236F03F1E5FCE07A104B74 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BC23653C04375CC93CE436B3 /* CollectionsExtensions.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7D3CD831FACA37B00A8633F /* TestExtensions.swift in Sources */,
+				BC236415BC58E9AEE6336434 /* CollectionsExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
