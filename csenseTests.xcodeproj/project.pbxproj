@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A704F4091FAC4C1300833615 /* csenseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A704F3FF1FAC4C1300833615 /* csenseTests.framework */; };
 		A704F4101FAC4C1300833615 /* csenseTests.h in Headers */ = {isa = PBXBuildFile; fileRef = A704F4021FAC4C1300833615 /* csenseTests.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7B06DD42000F35200FAEDD6 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A7B06DD32000F35200FAEDD6 /* .swiftlint.yml */; };
 		A7D3CD831FACA37B00A8633F /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D3CD821FACA37B00A8633F /* TestExtensions.swift */; };
 		A7D3CD861FACA40A00A8633F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D3CD851FACA3D800A8633F /* XCTest.framework */; };
 		BC236415BC58E9AEE6336434 /* CollectionsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23653C04375CC93CE436B3 /* CollectionsExtensions.swift */; };
@@ -29,6 +30,7 @@
 		A704F4021FAC4C1300833615 /* csenseTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = csenseTests.h; sourceTree = "<group>"; };
 		A704F4031FAC4C1300833615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A704F4081FAC4C1300833615 /* csenseTestsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = csenseTestsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7B06DD32000F35200FAEDD6 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		A7D3CD821FACA37B00A8633F /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		A7D3CD851FACA3D800A8633F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		BC23653C04375CC93CE436B3 /* CollectionsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionsExtensions.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 		A704F3F51FAC4C1300833615 = {
 			isa = PBXGroup;
 			children = (
+				A7B06DD32000F35200FAEDD6 /* .swiftlint.yml */,
 				A704F4011FAC4C1300833615 /* csenseTests */,
 				A704F4001FAC4C1300833615 /* Products */,
 				A7D3CD841FACA3D700A8633F /* Frameworks */,
@@ -193,6 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7B06DD42000F35200FAEDD6 /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
