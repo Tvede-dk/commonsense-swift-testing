@@ -48,6 +48,9 @@ public extension Optional {
 }
 
 public extension Optional where Wrapped: Equatable {
+    /**
+     * 
+     */
     public func assertNotNilEquals(_ value: Wrapped, message: String = "",
                                    file: StaticString = #file, line: UInt = #line) {
         guard let safe = self else {
